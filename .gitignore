@@ -1,0 +1,13 @@
+# Ficheiros do Sistema Operativo (Windows e Mac)
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# Ficheiros temporários e auxiliares
+readier
+*.tmp
+*.log
+
+# Configurações de editores de código (VS Code, etc.)
+.vscode/
+.idea/
