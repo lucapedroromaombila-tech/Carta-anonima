@@ -1,14 +1,14 @@
-const target = "Miúda mais incrível"; 
+const target = "Miúda mais incrível";
 
 const text = `No meio de tanta emoções e distrações no dia a dia, há conexões que surgem para trazer leveza e fazer as coisas fazerem mais sentido.\n\nQueria apenas que soubesses, da forma mais sincera possível, que a tua presença acalma o meu caos e o teu sorriso consegue mudar o ritmo de qualquer dia comum. Tens uma energia única e cativante.\n\nPara mim, tu és a miúda mais incrível que já conheci, e poder partilhar momentos e conversas contigo é, sem dúvida, o meu detalhe favorito da rotina. Obrigado por seres exatamente quem és. ❤️`;
 
 function revelarSurpresa() {
     const audio = document.getElementById('musica');
-    audio.volume = 0.4; 
+    audio.volume = 0.4;
     audio.play().catch(e => console.log("Áudio aguardando permissão"));
 
     document.getElementById('botao').style.display = 'none';
-    
+
     const heading = document.getElementById('titulo');
     heading.innerText = `Para a ${target}`;
     heading.style.color = "#ff4d6d";
@@ -19,7 +19,7 @@ function revelarSurpresa() {
     typeEffect(document.getElementById('conteudo-secreto'), text, 0, () => {
         const box = document.getElementById('conteudo-secreto');
         box.innerHTML = box.innerHTML.replace(
-            "tu és a miúda mais incrível", 
+            "tu és a miúda mais incrível",
             '<span class="destaque">tu és a miúda mais incrível</span>'
         );
 
@@ -36,14 +36,14 @@ function revelarSurpresa() {
         footerText.style.fontWeight = "500";
         footerText.style.marginBottom = "10px";
 
-        const contactBtn = document.createElement('a'); 
-        contactBtn.href = "https://wa.me/244952850762?text=Ol%C3%A1!%20Vi%20a%20tua%20surpresa.";
+        const contactBtn = document.createElement('a');
+        contactBtn.href = "https://wa.me/'CONTACTO USER'?text=Ol%C3%A1!%20Vi%20a%20tua%20surpresa.";
         contactBtn.target = "_blank";
         contactBtn.innerText = "→";
 
         contactBtn.style.display = "inline-block";
-        contactBtn.style.textDecoration = "none"; 
-        contactBtn.style.color = "#fff"; 
+        contactBtn.style.textDecoration = "none";
+        contactBtn.style.color = "#fff";
         contactBtn.style.background = "rgba(255, 77, 109, 0.2)";
         contactBtn.style.border = "1px solid #ff4d6d";
         contactBtn.style.padding = "8px 16px";
@@ -78,18 +78,18 @@ function typeEffect(element, content, i, callback) {
 function spawnHeart() {
     const item = document.createElement('div');
     item.classList.add('coracao');
-    
+
     const set = ['❤️', '💖', '✨', '❤️','😘'];
     item.innerText = set[Math.floor(Math.random() * set.length)];
-    
+
     item.style.left = Math.random() * 100 + 'vw';
     item.style.setProperty('--lateral', (Math.random() * 80 - 40) + 'px');
     item.style.setProperty('--rotacao', (Math.random() * 360) + 'deg');
-    
+
     const randomSize = (Math.random() * 18 + 16) + 'px';
     item.style.fontSize = randomSize;
-    item.style.animationDuration = (Math.random() * 2 + 2.8) + 's'; 
-    
+    item.style.animationDuration = (Math.random() * 2 + 2.8) + 's';
+
     document.body.appendChild(item);
 
     setTimeout(() => {
